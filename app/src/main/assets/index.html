@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Focusbanner电影网站常用左右滚动焦点图效果 - sc.chinaz.com - 站长素材</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="js/plus/focusbanner/jquery.focusbanner.css" />
+
+
+</head>
+<body>
+<div class="focus" >
+<ul id="banner_img" class="f-img-list">
+<li><img src="images/1.jpg" /></li>
+<li><img src="images/2.jpg" /></li>
+<li><img src="images/3.jpg" /></li>
+</ul>
+
+
+<a href="javascript:void(0);" class="focus-page-btn focus-btn-prev" hidefocus="true" style="display: none;"></a>
+<a href="javascript:void(0);" class="focus-page-btn focus-btn-next" hidefocus="true" style="display: none;"></a>
+<div class="f-b">
+<div class="f-content" style="display:none;">
+<div class="d-img-list-bg"></div>
+
+
+
+<ul id="banner_content" class="d-img-list">
+
+
+<li>
+<h3>站长素材</h3>
+<p>站长脚本提供精品网页特效,jQuery特效,CSS特效,JavaScript代码,flash特效等网页设计特效免费下载</p>
+</li>
+
+<li>
+<h3>站长素材 - sc.chinaz.com</h3>
+<p>站长脚本提供精品网页特效,jQuery特效,CSS特效,JavaScript代码,flash特效等网页设计特效免费下载</p>
+</li>
+<li>
+<h3>sc.chinaz.com</h3>
+<p>站长脚本提供精品网页特效,jQuery特效,CSS特效,JavaScript代码,flash特效等网页设计特效免费下载</p>
+</li>
+</ul>
+<div id="banner_btn" class="focus-btns">
+<a href="http://sc.chinaz.com/jscode/adjs" class="btn-focus btn-manage"></a>
+<a href="http://sc.chinaz.com/jscode/adjs" class="btn-focus btn-manage"></a>
+<a href="http://sc.chinaz.com/jscode/adjs" class="btn-focus btn-manage"></a>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+//var banner = document.getElementById('banner_img');
+
+    function enableSlide(event) {
+        Android.enableSlide();
+    }
+	
+	function disableSlide(event) {
+//	alert("Hello! I am an alert box!!");
+       Android.disableSlide();
+    }
+	
+	//banner.addEventListener(“touchstart”, disableSlide，false);
+	//banner.addEventListener(“touchend”, enableSlide,false);
+	
+	var btn = document.getElementById("banner_img");
+
+btn.addEventListener("touchstart", function () {
+   // alert("touchstart");
+	  Android.preventParentTouchEvent();
+}, false);
+
+
+
+
+</script>
+<script src="js/plus/focusbanner/jquery.min.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/plus/focusbanner/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/plus/focusbanner/jquery.focusbanner.js"></script>
+<!--[if IE 6]>
+<script src="js/DD_belatedPNG.js"></script>
+<script>
+DD_belatedPNG.fix('.focus-page-btn,.btn-focus');
+</script>
+<![endif]-->
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+
+<li> 
+<p>button test<input type="button" value="demo" onClick="disableSlide()" /> </p>
+</li>
+</div>
+</body>
+</html>
